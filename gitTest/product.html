@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <!--reset-->
+    <link rel="stylesheet" href="styles/layout/reset.css">
+    <!--font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--indexCSS-->
+    <link rel="stylesheet" href="styles/layout/globalStyle.css">
+    <link rel="stylesheet" href="styles/layout/headerStyle.css">
+    <link rel="stylesheet" href="styles/product/asideStyle.css">
+    <link rel="stylesheet" href="styles/product/productContainerStyle.css">
+    <link rel="stylesheet" href="styles/product/pageStyle.css">
+
+    <link rel="stylesheet" href="styles/layout/footerStyle.css">
+
+    <style>
+        
+        
+        
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header>
+            <a href="#">
+                <img class="imgLogo" src="./images/Logo.jpg" alt="無法顯示圖片">
+            </a>
+            <div class="searchBar">
+                <div class="searchInputBack">
+                    <input type="text" class="searchInput">
+                </div>
+                <button class="searchBarIcon"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <ul class="topNav" id="topNav">
+                <li><a href="#">關於我們</a></li>|
+                <li><a href="#">設定</a></li>|
+                <li><a href="#"><i class="fa-solid fa-user-large"></i></a></li>
+                <!-- <li><a href="#"><i class="loginedUser">123</i></a></li> -->
+
+            </ul>
+            <div class="memberContainer" id="memberContainer">
+                <ul class="memberNav">
+                    <!-- <a href="#">
+                        <li>註冊</li>
+                    </a>
+                    <a href="#">
+                        <li>登入</li>
+                    </a> -->
+                    <a href="#">
+                        <li>修改個人資料</li>
+                    </a>
+                    <a href="#">
+                        <li>購物車</li>
+                    </a>
+
+                </ul>
+            </div>
+        </header>
+
+        <div class="main">
+            
+                <aside>
+                    <nav>
+                        <ul class="category" id="category">
+                            <li>
+                                <p>衣物</p>
+                                <ul class="subCategory" id="subCategory">
+                                    <li>上衣</li>
+                                    <li>褲子</li>
+                                    <li>襪子</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="category" id="category">
+                            <li>
+                                <p>3C</p>
+                                <ul class="subCategory" id="subCategory">
+                                    <li>電腦</li>
+                                    <li>電視</li>
+                                    <li>鍵盤</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    
+                </aside>
+                <div class="productContainer" >
+                    <ul>
+                        <li class="productItem">
+                            <a href="#">
+                                <figure>
+                                    <img src="images/product.jpg" alt="">
+                                </figure>
+                                <div class="productInfo">
+                                    <div class="productName">
+                                        <p>超屌商品1</p>
+                                    </div>
+                                    <div class="productDescription">
+                                        <p>這是一個很屌的商品，多屌?超屌。</p>
+                                    </div>
+                                    <div class="productPrice">
+                                        <p>NT$69</p>
+                                    </div>
+                                    <div class="addToCart">
+                                        <button>加入購物車</button>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                    <div class="pageContainer">
+                        <div class="page">1</div>
+                        <div class="page">2</div>
+                        <div class="page">3</div>
+                        <div class="page">4</div>
+                    </div>
+                    
+            </div>
+        </div>
+        
+
+        <footer>
+            <div class="companyInfo">
+                <p>網站購物有限公司台灣分公司</p>
+                <p>地點：Taipei</p>
+                <p>統一編號: 00000000</p>
+                <p>© 2023 WebShop. 版權所有。</p>
+            </div>
+        </footer>
+    </div>
+    
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <!--indexJS-->
+    <script src="scripts/layout/showMemberContainer.js"></script> 
+    <script src="scripts/product/aside.js"></script> 
+    
+    <script>
+        let page = $("<div/>",{text: "Click me"}).addClass("page").appendTo($(".pageContainer"))
+
+        // function getProductCount(cate){
+
+        // }
+    
+    
+    </script>
+    <script src="scripts/product/page.js"></script> 
+
+    
+</body>
+
+</html>

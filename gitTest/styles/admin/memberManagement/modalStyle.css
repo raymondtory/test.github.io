@@ -1,0 +1,126 @@
+html,body{
+    position:relative
+}
+.modalContainer{
+    display:none;
+    border:3px solid black;
+    height:100%;
+    width:100%;
+    position:fixed;
+    bottom:0px;
+    z-index:10;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modalTitle{
+    margin:auto;
+    margin-top:90px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width:450px;
+    height: 50px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color:rgb(72, 148, 247);
+
+}
+.close{
+    background-color: #FFF;
+    margin-right:10px;
+    height:35px;
+    position:relative;
+    box-shadow: 0 3px 0 1px #e30d0d inset;
+    border-radius: 7px;
+    
+}
+.close i{
+    color: #e30d0d;
+    font-size:42px;
+    height:100%;
+    width:100%;
+    border-radius: 7px;
+
+}
+.close i:hover{
+    cursor:pointer;
+}
+
+.modal{
+    margin:auto;
+    position:relative;
+    width: 450px;
+    background-color: #fefefe;
+}
+form{
+    height:100%;
+
+}
+.modal label{
+    font-size: 1.2em;
+    margin-right: 8px;
+}
+.modal input{
+    font-size: 1em;
+}
+.inputItem{
+    margin-bottom:40px;
+    display:flex
+
+}
+.createProductContainer{
+    padding:40px 60px 20px 60px ;
+    
+}
+.createProductContainer p{
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    
+}
+
+.inputItem label{
+    float:left;
+    flex-basis: 80px;
+}
+/* #prodictImagePath{
+    margin-left: 82px;
+} */
+
+
+.buttonInputItem{
+    display:flex;
+    justify-content: center;
+
+    
+}
+.buttonInputItem input[type="button"]{
+    font-size:1.2em;
+    font-weight:bolder;
+    padding:15px 30px;
+    border-radius:10px;
+    border:none;
+    background-color: rgb(72, 148, 247);
+    color:#FFF;
+    margin-bottom: 10px;
+
+    
+}
+.buttonInputItem input[type="button"]:hover{
+    background-color: rgba(72, 148, 247, 0.411);
+    cursor:pointer
+}
+
+
+.radioInputContainer div{
+    display: flex;
+    align-items: center;
+}
+
+.radioInputContainer div input {
+    font-size: 0.9em;
+    padding: 2px;
+    border-radius: 5px
+}

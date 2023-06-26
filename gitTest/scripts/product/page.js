@@ -1,0 +1,15 @@
+$(".page").eq(0).css({"background-color":"red","color":"#FFF"});
+$(".page").on({
+    "click":function(){
+            $(this).css({"background-color":"red","color":"#FFF"})
+            $(this).siblings().css({"background-color":"#FFF","color":"black"})
+            console.log($(this).index()+1)
+    },
+    "mouseenter":function(){
+        $(this).addClass("pageMouseenter")
+        console.log("mouseenter")
+    },
+    "mouseleave":function(){
+        $(this).removeClass("pageMouseenter")
+    }
+})

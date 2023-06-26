@@ -1,0 +1,97 @@
+.main{
+    margin:auto;
+}
+.signupContainer{
+    width: 500px;
+}
+.signupTitle{
+    border: 1px solid gray;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    background-color: rgb(29, 252, 178);
+    margin-top: 10px;
+    box-shadow: 1px 0 1px 0 gray,-1px -1px 1px 0 gray;
+}
+
+.signupTitle p{
+    margin: 12px 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color:#FFF;
+}
+.signupInfoContainer{
+    border: 1px solid gray;
+    box-shadow: 1px 1px 1px 0 gray,-1px 0 1px 0 gray;
+    padding-top:15px
+}
+
+.signupInfoItem{
+    margin:20px 60px 15px 120px;
+}
+.signupInfoItem label{
+    font-size: 1.3rem;
+    font-family: 微軟正黑體;
+    font-weight: bold;
+}
+.signupInfoItem small{
+    margin-left:15px;
+    color:red;
+}
+.signupInfoItem p{
+    cursor:default;
+}
+
+.signupInfoInput{
+    display: flex;
+    justify-content:space-around;
+}
+.InputDiv{
+    border:1px gray solid;
+    padding:10px 50px 10px 10px;
+    background-color:#FFF;
+    border-radius: 5px;
+    margin:2px;
+}
+
+.InputDiv input{
+    font-size: 1.1rem;
+    outline:none;
+    border:none;
+
+}
+.InputDiv input:focus{
+    outline:none;
+}
+
+.correctDiv{
+    margin-left: 15px;
+}
+.correctDiv i{
+    font-size: 35px;
+}
+.signupFooter{
+    text-align: center;
+}
+.available{
+    background:rgb(29, 252, 178);
+    color:#FFF;
+    border:1px rgba(128, 128, 128, 0.5) solid;
+    box-shadow: 1px 1px 1px 1px rgb(167, 247, 220);
+}
+.available:hover{
+    background:rgb(138, 248, 212);
+    color:#000;
+    box-shadow: 0 1px 1px 1px rgb(167, 247, 220);
+    cursor:pointer;
+}
+.signupFooter button{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding:5px 15px;
+    border-radius: 5px;
+    width:100px;
+    margin: 15px 0;
+}  
+.errorText{
+    max-width:300px;
+}

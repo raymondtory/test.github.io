@@ -1,0 +1,22 @@
+.pageContainer{
+    margin-top:20px;
+    display:flex;
+    justify-content: center;
+    box-sizing: border-box;
+
+}
+.page{
+    height:36px;
+    margin:15px;
+    font-size:1.2em;
+    padding:8px 12px;
+    border-radius: 5px;
+    cursor:pointer;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 2px 2px aquamarine;
+}
+
+.pageMouseenter{
+    border:0.5px solid rgba(128, 128, 128, 0.295);
+    text-decoration: underline;
+}

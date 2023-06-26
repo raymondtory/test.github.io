@@ -1,0 +1,139 @@
+.main{
+    padding: 0 280px;
+}
+.pageTitleContainer{
+    margin-top:20px;
+}
+.pageTitle{
+    font-size: 1.8em;
+    font-weight:900;
+}
+
+.searchAndCreateContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.searchBar {
+    background-color: #FCFCFC;
+    display: flex;
+    border: 1px solid #9D9D9D;
+    border-radius: 10px;
+    padding: 3px 5px;
+    align-items: center;
+    width: 260px;
+    margin: 10px 0;
+}
+
+.searchInput {
+    margin: 0 20px 0 10px;
+    font-size: 1em;
+    padding: 5px;
+    width: 80%;
+    border: none;
+}
+
+.searchInput:focus {
+    outline: none;
+}
+
+.searchBarIcon {
+    background-color: rgb(72, 148, 247);
+    color: #FCFCFC;
+    border: none;
+    padding: 8px;
+    font-size: 0.9em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.searchBar button:hover {
+    background-color: rgba(72, 148, 247, 0.747);
+    /*border: 1px solid #2d293d;*/
+}
+/*TABLE*/
+.pageTable{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.pageTable thead tr {
+    background-color: rgb(72, 148, 247);
+}
+.pageTable thead tr th:first-child{
+    border-top-left-radius: 10px;
+}
+.pageTable thead tr th:last-child{
+    border-top-right-radius: 10px;
+
+}
+.pageTable thead th{
+    font-size:1.2em;
+    padding:10px 10px;
+    color:#FFF
+
+}
+.pageTable tbody {
+    text-align: center;
+    background-color: rgba(242, 252, 252, 0.753)
+}
+.pageTable tbody tr:hover{
+    background-color:#FFF;
+    border:0.5px solid black
+    
+
+}
+.pageTable tbody td{
+    padding:8px 5px;
+    border:3px solid #FFF;
+    max-width:300px;
+
+}
+.pageTable tbody td{
+    font-size:1.0em;
+
+}
+
+.creat {
+    border-radius: 10px;
+    border: none;
+    width: 45px;
+    height: 45px;
+    font-size: 1.1em;
+    background-color: rgb(42, 252, 182);
+    color: #FFF;
+    margin-right: 20px
+}
+
+
+.creat:hover {
+    background: rgba(42, 252, 182, 0.39);
+    cursor: pointer
+}
+
+.edit, .delete {
+    border-radius: 10px;
+    border: none;
+    width: 30px;
+    height: 30px;
+    font-size: 1em;
+}
+.edit {
+    background-color: rgb(72, 148, 247);
+    color: #FFF;
+}
+.edit:hover {
+    background: rgba(72, 148, 247, 0.541);
+    cursor: pointer
+}
+
+.delete {
+    background: #da071c;
+    color: #FFF;
+}
+
+.delete:hover {
+    background: #da071c71;
+    cursor: pointer
+}

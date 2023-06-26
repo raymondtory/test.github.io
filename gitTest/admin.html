@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <!--reset-->
+    <link rel="stylesheet" href="styles/layout/reset.css">
+    <!--font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--indexCSS-->
+    <link rel="stylesheet" href="styles/admin/globalStyle.css">
+    <link rel="stylesheet" href="styles/admin/headerStyle.css">
+    <link rel="stylesheet" href="styles/admin/productManagement/mianStyle.css">
+    <link rel="stylesheet" href="styles/admin/productManagement/modalStyle.css">
+
+    
+<style>
+    
+
+</style>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header>
+            <a href="#">
+                <img class="imgLogo" src="./images/Logo.jpg" alt="無法顯示圖片">
+            </a>
+
+            <ul class="topNav" id="topNav">
+                <li><a href="#">商品管理</a></li>|
+                <li><a href="#">會員管理</a></li>|
+                <li><a href="#">新增管理員</a></li>|
+                <li><a href="#"><i class="fa-solid fa-user-large"></i></a></li>
+
+            </ul>
+            <div class="memberContainer" id="memberContainer">
+                <ul class="memberNav">
+
+                    <a href="#">
+                        <li>修改個人資料</li>
+                    </a>
+                    <a href="#">
+                        <li>登出</li>
+                    </a>
+
+                </ul>
+            </div>
+        </header>
+
+        <div class="main">
+            <div class="pageTitleContainer"><h1 class="pageTitle">商品管理</h1></div>
+            <div class="searchBar">
+                <div class="searchInputBack">
+                    <input type="text" class="searchInput">
+                </div>
+                <button class="searchBarIcon"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <button class="creat" id ="create"><i class="fa-sharp fa-solid fa-plus fa-lg"></i></button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>商品編號</th>
+                        <th>商品名稱</th>
+                        <th>商品價錢</th>
+                        <th>修改</th>
+                        <th>刪除</th>
+                    </tr>                
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>QQQ</td>
+                        <td>NT$68</td>
+                        <td><button class="edit"><i class="fa-solid fa-pen-to-square"></i></button></td>
+                        <td><button class="delete"><i class="fa-solid fa-trash-can"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>QQQ</td>
+                        <td>NT$68</td>
+                        <td><button class="edit"><i class="fa-solid fa-pen-to-square"></i></button></td>
+                        <td><button class="delete"><i class="fa-solid fa-trash-can"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>QQQ</td>
+                        <td>NT$68</td>
+                        <td><button class="edit"><i class="fa-solid fa-pen-to-square"></i></button></td>
+                        <td><button class="delete"><i class="fa-solid fa-trash-can"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        
+
+    </div>
+    
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <!--indexJS-->
+    <script src="scripts/layout/showMemberContainer.js"></script> 
+
+
+    <script>
+        
+    </script>
+
+</body>
+
+</html>

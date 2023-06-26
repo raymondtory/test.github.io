@@ -1,0 +1,124 @@
+header {
+    width: 100%;
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    justify-content:  space-between;
+    box-shadow: 0 0 3px black;
+    margin-bottom: 2px;
+    padding: 0 300px;
+
+}
+
+header a>.imgLogo {
+    height: 65px;
+    border-radius: 10px;
+}
+
+.searchBar {
+    background-color: #FCFCFC;
+    display: flex;
+    border-radius: 10px;
+    padding: 6px 10px;
+    align-items: center;
+}
+
+.searchInput {
+    margin: 0 20px 0 10px;
+    font-size: 1.4em;
+    padding: 5px;
+    width: 90%;
+    border: none;
+}
+
+.searchInput:focus {
+    outline: none;
+}
+
+.searchBarIcon {
+    background-color: aquamarine;
+    color: #FCFCFC;
+    border: none;
+    padding: 5px;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.searchBar button:hover {
+    background-color: #C1FFE4;
+    border: 1px solid #9D9D9D;
+}
+
+.topNav {
+    display: flex;
+    align-items: center;
+    min-width: 350px;
+}
+
+.topNav>li {
+    font-weight: bolder;
+    font-size: 1.5em;
+    color: #FCFCFC;
+    margin: 0 15px;
+}
+
+.topNav>li>a,
+.memberNav li {
+    color: #FCFCFC;
+}
+
+.topNav>li>a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.fa-user-large {
+    border: 2px solid #FCFCFC;
+    border-radius: 50%;
+    padding: 12px
+}
+
+.fa-user-large:hover {
+    border: 2px solid black;
+
+}
+
+.memberContainer {
+    visibility:hidden;
+    border: 1px solid #9D9D9D;
+    width: 100px;
+    background-color: aquamarine;
+    border-radius: 8px;
+    position: absolute;
+    padding: 20px;
+    top: 60px;
+    right: 410px;
+    z-index: 20;
+    box-shadow: 1px 1px 0 0 #9D9D9D;
+}
+
+.memberNav {
+    color: #FCFCFC;
+}
+
+.memberNav li {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 6px;
+    padding: 5px 6px;
+    text-decoration: underline;
+}
+
+.memberNav li:hover {
+    color: #000000;
+    background-color: #FCFCFC;
+    box-shadow: 0px 1px 0px 0px #D7FFEE;
+}
+.loginedUser{
+    background-color:rgba(182, 31, 76, 0.884);
+    box-shadow:1px 1px 3px 1px red,-1px -1px 3px 1px red;
+    padding:18px;
+    border-radius:20%;
+}

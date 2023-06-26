@@ -1,0 +1,128 @@
+html,body{
+    position:relative
+}
+.modalContainer{
+    border:3px solid black;
+    height:100%;
+    width:100%;
+    position:fixed;
+    bottom:0px;
+    z-index:10;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modalTitle{
+    margin:auto;
+    margin-top:90px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width:800px;
+    height: 50px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color:rgb(72, 148, 247);
+
+}
+.close{
+    background-color: #FFF;
+    margin-right:10px;
+    height:35px;
+    position:relative;
+    box-shadow: 0 3px 0 1px #e30d0d inset;
+    border-radius: 7px;
+    
+}
+.close i{
+    color: #e30d0d;
+    font-size:42px;
+    height:100%;
+    width:100%;
+    border-radius: 7px;
+
+}
+.close i:hover{
+    cursor:pointer;
+}
+
+.modal{
+    margin:auto;
+    position:relative;
+    width: 800px;
+    height: 550px;
+
+    background-color: #fefefe;
+    padding: 25px 0px;
+}
+form{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    height:100%
+
+}
+.modal label{
+    font-size: 1.2em;
+    margin-right: 8px;
+}
+.modal input{
+    font-size: 1em;
+}
+.inputItem{
+    margin-bottom:22px;
+}
+.createProductLeft{
+    grid-column: 1/2;
+    padding-left: 60px;
+}
+.createProductRight{
+    grid-column: 2/3;
+    padding-left: 60px;
+    position:relative;
+}
+.inputItem label{
+    float:left
+}
+#prodictImagePath{
+    margin-left: 82px;
+}
+.createProductRight p,.createProductLeft p{
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.createProductRight span,.createProductLeft span{
+    font-size: 0.8em;        
+}
+.buttonInputItem{
+    float:right;
+    position:absolute;
+    bottom:0px;
+    right:90px
+
+}
+.buttonInputItem input[type="button"]{
+    font-size:1.2em;
+    font-weight:bolder;
+    padding:15px 30px;
+    border-radius:10px;
+    border:none;
+    background-color: rgb(72, 148, 247);
+    color:#FFF
+
+}
+.buttonInputItem input[type="button"]:hover{
+    background-color: rgba(72, 148, 247, 0.411);
+    cursor:pointer
+}
+.selectInputContainer{
+    display:flex;
+    align-items: center;
+}
+.selectInputContainer select{
+    font-size:0.9em;
+    padding:2px;
+    border-radius:5px
+    
+}

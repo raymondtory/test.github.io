@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!--reset-->
+<link rel="stylesheet" href="styles/layout/reset.css">
+<link rel="stylesheet" href="styles/layout/globalStyle.css">
+
+<style>
+    .creat {
+        border-radius: 10px;
+        border: none;
+        width: 50px;
+        height: 50px;
+        font-size: 1.3em;
+        background-color: rgb(42, 252, 182);
+        color: #FFF;
+    }
+
+
+    .creat:hover, .edit:hover {
+        background: rgba(42, 252, 182, 0.39);
+        cursor: pointer
+    }
+</style>
+<style>
+    html,body{
+        position:relative
+    }
+    .modalContainer{
+        height:100%;
+        width:100%;
+        position:fixed;
+        bottom:0px;
+        z-index:10;
+        overflow: auto;
+        left: 0;
+        top: 0;
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        display: none;
+        
+    }
+    .modalTitle{
+        margin:auto;
+        margin-top:90px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width:800px;
+        height: 50px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        background-color:rgb(72, 148, 247);
+
+    }
+    .close{
+        background-color: #FFF;
+        margin-right:10px;
+        height:35px;
+        position:relative;
+        box-shadow: 0 3px 0 1px #e30d0d inset;
+        border-radius: 7px;
+    }
+    .close i{
+        color: #e30d0d;
+        font-size:42px;
+        height:100%;
+        width:100%;
+        border-radius: 7px;
+    }
+    .close i:hover{
+        cursor:pointer;
+    }
+
+    .modal{
+        margin:auto;
+        position:relative;
+        width: 800px;
+        height: 550px;
+        background-color: #fefefe;
+        padding: 25px 0px;
+    }
+    form{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        height:100%
+
+    }
+    .modal label{
+        font-size: 1.2em;
+        margin-right: 8px;
+    }
+    .modal input{
+        font-size: 1em;
+
+    }
+    .inputItem{
+        margin-bottom:22px;
+    }
+    .createProductLeft{
+        grid-column: 1/2;
+        padding-left: 60px;
+    }
+    .createProductRight{
+        grid-column: 2/3;
+        padding-left: 60px;
+        position:relative;
+    }
+    .inputItem label{
+        float:left
+    }
+    #prodictImagePath{
+        margin-left: 82px;
+    }
+    .createProductRight p,.createProductLeft p{
+        font-size: 1.3em;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+    .createProductRight span,.createProductLeft span{
+        font-size: 0.8em;        
+    }
+    .buttonInputItem{
+        float:right;
+        position:absolute;
+        bottom:0px;
+        right:90px
+
+    }
+    .buttonInputItem input[type="button"]{
+        font-size:1.2em;
+        font-weight:bolder;
+        padding:15px 30px;
+        border-radius:10px;
+        border:none;
+        background-color: rgb(72, 148, 247);
+        color:#FFF
+
+    }
+    .buttonInputItem input[type="button"]:hover{
+        background-color: rgba(72, 148, 247, 0.411);
+        cursor:pointer
+    }
+    .selectInputContainer{
+        display:flex;
+        align-items: center;
+    }
+    .selectInputContainer select{
+        font-size:0.9em;
+        padding:2px;
+        border-radius:5px
+    }
+    .addButton{
+        margin-left:8px;
+        border-radius:50%;
+        border:none;
+        background-color: rgb(72, 148, 247);
+        color:#FFF;
+        padding:5px;
+        
+    }
+    .addButton:hover{
+        background-color: rgba(72, 148, 247, 0.411);
+        cursor:pointer
+    }
+    
+    .innerModalContainer{
+        height:100%;
+        width:100%;
+        position:fixed;
+        bottom:0px;
+        z-index:10;
+        overflow: auto;
+        left: 0;
+        top: 0;
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+    .innerModal{
+        width: 330px;
+        background-color: #fefefe;
+        padding: 25px 0px;
+    }
+    .innerModalTitle{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width:330px;
+        height: 40px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        background-color:rgb(72, 148, 247);
+    }
+    .innerModal form{
+        padding:0 60px;
+        display: flex;
+        flex-direction: column;
+    }
+    .innerModalClose{
+        background-color: #FFF;
+        margin-right:10px;
+        height:32px;
+        position:relative;
+        box-shadow: 0 3px 0 1px #e30d0d inset;
+
+        border-radius: 7px;
+        cursor:pointer;
+    }
+    
+    
+    .innerModalClose i{
+        font-size:2.3em;
+        height:100%;
+        width:100%;
+        color: #e30d0d;
+        border-radius: 7px;
+    }
+    .innerModalInputItem{
+        margin-bottom:20px;
+    }
+    .innerModal label{
+        font-size: 1.2em;
+        margin-right: 8px;
+    }
+    .innerModal input{
+        font-size: 1em;
+    }
+    .innerModal select{
+        font-size: 1em;
+
+    }
+    .innerModalButtonInputItem{
+       margin:auto 
+    }
+    .innerModalButtonInputItem input[type="button"]{
+        border:1px solid red;
+        font-size:1.2em;
+        font-weight:bolder;
+        padding:10px 20px;
+        border-radius:10px;
+        border:none;
+        background-color: rgb(72, 148, 247);
+        color:#FFF;
+    }
+    .innerModalButtonInputItem input[type="button"]:hover{
+        background-color: rgba(72, 148, 247, 0.411);
+        cursor:pointer
+    }
+</style>
+<body>
+    <li class="productSpecification" id="specificationContainer">
+        <p>規格</p>
+        <div class="specification" id="specification">
+            <select
+                style="font-size: 0.6em;border: 1px solid rgba(190, 187, 187, 0.568);border-radius: 10px;padding: 10px;outline: none;margin-left: 10px"
+                required>
+                <option value="none" selected disabled hidden>顏色</option>
+                <option style="font-size: 0.8em;" data-additionalPrice="1">紅色</option>
+                <option style="font-size: 0.8em;" data-additionalPrice="2">藍色</option>
+                <option style="font-size: 0.8em;" data-additionalPrice="3">綠色</option>
+            </select>
+            <select
+                style="font-size: 0.6em;border: 1px solid rgba(190, 187, 187, 0.568);border-radius: 10px;padding: 10px;outline: none;margin-left: 10px"
+                required>
+                <option value="none" selected disabled hidden>尺寸</option>
+                <option style="font-size: 0.8em;">14吋</option>
+                <option style="font-size: 0.8em;">15吋</option>
+                <option style="font-size: 0.8em;">16吋</option>
+            </select>
+        </div>
+    </li>
+    
+    <p id="productPrice">NT$ 3,000</p>
+
+
+    <a ><button class="creat" id="create"><i class="fa-sharp fa-solid fa-plus fa-lg"></i></button></a>
+    <div class="modalContainer" id="modalContainer">
+        <div class="modalTitle">
+            <div class="close" id="close"><i class="fa-solid fa-square-xmark" ></i></div>
+        </div>
+        <div class="modal">
+            <form action="">
+                
+                <input type="hidden" id="productId">
+                
+                <div class="createProductLeft" id="createProductLeft">
+                    <p>-基本資料- <span style="color:red">(必填)</span></p>
+                    <div class="inputItem">
+                        <label>商品名稱</label>
+                        <input type="text" id="productName">
+                    </div>
+                    <div class="inputItem">
+                        <label>商品成本</label>
+                        <input type="text" id="productCost">
+                    </div>
+                    <div class="inputItem">
+                        <label>商品價格</label>
+                        <input type="text" id="productPrice">
+                    </div>
+                    <div class="inputItem">
+                        <label>商品庫存</label>
+                        <input type="text" id="productQuantity">
+                    </div>
+                    <div class="inputItem">
+                        <label>商品描述</label>
+                        <textarea id="productDescript" name="productDescript" rows="6" cols="37" style="resize:none;"></textarea>
+                    </div>
+                    <p>-分類- <span style="color:red">(必填)</span></p>
+                    <div class="inputItem selectInputContainer">
+                        <label>商品主類</label>
+                        <select name="" id="">
+                            <option hidden disabel selected  >選擇主要分類</option>
+                        </select>
+                    </div>
+                    
+                    <div class="inputItem selectInputContainer">
+                        <label>商品子類</label>
+                        <select name="" id="">
+                            <option hidden disabel selected>選擇次要分類</option>
+                        </select>
+                    </div>
+                    
+                </div>
+                <div class="createProductRight" id="createProductRight">
+                    <p>-圖片- <span style="color:#888">(選填)</span></p>
+                    <div class="inputItem">
+                        <label>商品圖片</label>
+                        <img src="" alt=""style="width:150px;height:150px;margin-bottom:10px">
+                        <input type="file" id="prodictImagePath" style="font-size: 1em;">
+                    </div>
+                    <p>-規格- <span style="color:#888">(選填)</span></p>
+                    <div class="inputItem selectInputContainer">
+                        <label>規格名稱</label>
+                        <select name="" id="">
+                            <option hidden disabel selected>選擇規格名稱</option>
+                        </select>
+                        <button class="addButton addSpecification" id="addSpecification"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                    <div class="inputItem selectInputContainer">
+                        <label>規格選項</label>
+                        <select name="" id="">
+                            <option hidden disabel selected>選擇規格選項</option>
+                        </select>
+                        <button class="addButton addSpecification" id="addSpecificationOption"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                    <div class="inputItem buttonInputItem">
+                        <input type="button" value="建立">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="innerModalContainer" id="innerModalContainer">
+        <div class="innerModalTitle">
+            <div class="innerModalClose" id="innerModalClose"><i class="fa-solid fa-square-xmark" ></i></div>
+        </div>
+        <div class="innerModal" id="innerModal">
+            
+        </div>
+    </div>
+    
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script>
+        // const givenNumber = 123423134231233423;
+        // console.log(givenNumber.toLocaleString('en-US'))
+
+        // $("#specification").on("change","select",function(){
+        //      $(this).find("option:selected").attr("data-additionalPrice","2")
+        //     let additionalPrice = $(this).find("option:selected").attr("data-additionalPrice")
+        //     console.log()
+        //  })
+
+        // const originalPrice1 = $("#productPrice").html();
+        // const originalPrice2 = $("#productPrice").text();
+        // console.log(originalPrice1.substring(4))
+        // console.log(parseInt(originalPrice2.substring(4).replace(",","")))
+
+
+    </script>
+
+    <script>
+        $("#create").on("click",function(event){
+            event.preventDefault();
+            $("#modalContainer").css("display","block")
+            
+        })
+        $("#close").on("click",function(event){
+            event.preventDefault();
+            $("#modalContainer").css("display","none")
+        })
+
+       
+        $("#innerModalClose").on("click",function(event){
+            event.preventDefault();
+            $("#innerModalContainer").css("display","none")
+        })
+        async function renderCategory(){
+            const response = await fetch("https://localhost:7008/product/loadCategory")
+            const data = await response.json();
+
+            for(let i  =0 ;i<data.length;i++){
+                console.log(data[i])
+            }
+        }renderCategory();
+
+        //addSpecification
+        $("#addSpecification").on("click",function(event){
+            event.preventDefault();
+            let innerModalContainer= $("#innerModalContainer")
+            innerModalContainer.css("display","flex")
+            let innerModal = $("#innerModal")
+            innerModal.empty();
+            innerModal.html(`
+                <form action="" name="addSpecification">
+                    <div class="innerModalInputItem">
+                        <label>規格名稱</label>
+                        <input type="text" id="specificationName" name="specificationName">
+                    </div>
+                    <div class="innerModalInputItem innerModalButtonInputItem">
+                        <input type="button" value="新增" id="addSpecificationButton">
+                    </div>
+                </form>
+                `)
+            
+            $("#innerModal").on("click","#addSpecificationButton",async function(){
+                let specificationName= $("#innerModal").find("#specificationName").val()
+                const response = await fetch("https://localhost:7008/Product/createSpecification?specificationName=" + `${specificationName}`);
+                const data = await response.text();
+                alert(data);
+                $("#innerModalClose").trigger("click");
+            })
+        })
+        //addSpecificationOption
+        $("#addSpecificationOption").on("click",async function(event){
+            event.preventDefault();
+
+            let innerModalContainer= $("#innerModalContainer")
+            innerModalContainer.css("display","flex")
+            let innerModal = $("#innerModal")
+            innerModal.empty();
+            
+            innerModal.html(`
+                <form method="post" name="addSpecificationOption">
+                    <div class="innerModalInputItem">
+                        <label>規格名稱</label>
+                        <select id="specificationSelect" name="specificationSelect">
+                            <option selected disabled hidden>請選擇規格名稱</option>
+                        </select>
+                    </div>
+                    <div class="innerModalInputItem">
+                        <label>規格選項</label>
+                        <input type="text" id="specificationOptionName" name="specificationOptionName">
+                    </div>
+                    <div class="innerModalInputItem innerModalButtonInputItem">
+                        <input type="button" value="新增" id="addSpecificationOptionButton">
+                    </div>
+                </form>
+                `)        
+            const response = await fetch("https://localhost:7008/Product/getSpecification")
+            const data = await response.json();
+            let specificationSelect = innerModal.find("#specificationSelect")
+            for(let i = 0;i<data.length;i++){
+                let option = $("<option/>",{value:`${data[i].specificationId}`}).html(`${data[i].specificationName}`)
+                specificationSelect.append(option);
+                console.log(data[i].specificationId)
+                console.log(data[i].specificationName)
+            };
+
+            $("#innerModal").on("click","#addSpecificationOptionButton",async function(){
+                const formData= new FormData(document.addSpecificationOption);
+                const response = await fetch("https://localhost:7008/Product/createSpecificationOption",{
+                    method: 'POST',
+                    body:formData,
+                    header:{ 'Content-Type': 'multipart/form-data' }
+                });
+                const data = await response.text();
+                alert(data);
+                $("#innerModalClose").trigger("click");
+            })
+        })
+
+       
+        
+    </script>
+</body>
+
+</html>

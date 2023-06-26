@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" action="/Users/Create" id="myform">
+        <div>
+        <label for="FirstName">FirstName</label><br />
+        <input type="text" data-val="true" data-val-length="The field FirstName must be a string with a maximum length of 25." data-val-length-max="25" data-val-required="The FirstName field is required." id="FirstName" maxlength="25" name="FirstName" value="" /><br />
+        <span style="color: red;" data-valmsg-for="FirstName" data-valmsg-replace="true"></span>
+        </div>
+        <br />
+        <div>
+        <label for="LastName">LastName</label><br />
+        <input type="text" data-val="true" data-val-length="The field LastName must be a string with a minimum length of 3 and a maximum length of 50." data-val-length-max="50" data-val-length-min="3" data-val-required="The LastName field is required." id="LastName" maxlength="50" name="LastName" value="" /><br />
+        <span style="color: red;" data-valmsg-for="LastName" data-valmsg-replace="true"></span>
+        </div>
+        <br />
+        <div>
+        <label for="MailAddress">MailAddress</label><br />
+        <input type="email" data-val="true" data-val-email="The MailAddress field is not a valid e-mail address." data-val-required="The MailAddress field is required." id="MailAddress" name="MailAddress" value="" /><br />
+        <span style="color: red;" data-valmsg-for="MailAddress" data-valmsg-replace="true"></span>
+        </div>
+        <br />
+        <input type="submit" value="Create" />
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8C-7mCG55hBDrFHYMGeG3xGBvY_epwiSr_q_mFnFRpTKHxdV8s0kZB-v0LZtzzOrKOpTHvxPvb_4oukqQCBdOj3idVTMAiic9h-oZahWfai5LK6MOVbEpsiqyzyKAD89JX8O7YfiXSegLbcDZpHcQQI" />
+        <button id ="check"></button>
+    </form> 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js" integrity="sha512-xq+Vm8jC94ynOikewaQXMEkJIOBp7iArs3IhFWSWdRT3Pq8wFz46p+ZDFAR7kHnSFf+zUv52B3prRYnbDRdgog==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        // window.on("click",function(){
+        //     $("#myform").valid();
+
+        // })
+        $("#FirstName").on("blur",function(){
+            $("#myform").validate().element(this)
+
+        })
+        $("#LastName").on("blur",function(){
+            $("#myform").validate()
+
+        })
+        $(document).on("click",function(){
+            $("#myform").valid()
+
+        }
+        )
+        // $("#check").on("click",function(){
+            
+        // })
+    </script>
+</body>
+</html>

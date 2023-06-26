@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/layout/reset.css">
+
+    <style>
+        select{
+            
+            font-size: 1.2em;
+            border:1px solid rgba(190, 187, 187, 0.568);
+            border-radius: 10px;
+            padding:10px;
+            outline: none;
+            margin-left:10px
+
+        }
+        select:hover{
+            cursor:pointer;
+
+        }
+        select:focus{
+            box-shadow: 0 0 5px 0 rgba(0, 81, 255, 0.589);
+        }
+        
+        option {
+            font-size:1em;
+            
+        }
+        option:hover{
+            cursor:pointer;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <select required>
+        <option value="none" selected disabled hidden>顏色</option> 
+        <option >紅色</option>
+        <option >藍色</option>
+        <option >綠色</option>
+    </select>
+    <select required>
+        <option value="none" selected disabled hidden>尺寸</option> 
+        <option >14吋</option>
+        <option >15吋</option>
+        <option >16吋</option>
+    </select>
+
+
+
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/accounting.js/0.1/accounting.min.js" integrity="sha512-LLsvn7RXQa0J/E40ChF/6YAf2V9PJuLGG1VeuZhMlWp+2yAKj98A1Q1lsChkM9niWqY0gCkvHvpzqQOFEfpxIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        let money = 18.665;
+        console.log(accounting.formatMoney(money,symbol ='$',precision  = 0))
+    </script>
+    
+</body>
+</html>

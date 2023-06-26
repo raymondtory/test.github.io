@@ -1,0 +1,42 @@
+aside{
+    padding:20px 10px;
+    border-radius: 10px;
+}
+aside nav{
+    background-color:aquamarine;
+    padding:20px 10px;
+    border-radius: 10px;
+
+}
+aside ul{
+    border-radius: 8px;
+    margin:8px 5px;
+}
+
+.category{
+    font-size: 1.8em;
+}
+.category p{
+    padding:5px 0;
+    cursor:pointer;
+    font-weight:bold;
+}
+.category p:hover{
+    background-color:#FFF;
+}
+.subCategory{
+    font-size: 0.7em;
+    text-indent: 1em;
+    display: none;
+}
+.subCategory li{
+    margin:6px 0;
+    padding:3px 0;
+    cursor:pointer;
+}
+.subCategory li:hover{
+    background-color:#FFF
+}
+.selected{
+    background-color:#FFF
+}

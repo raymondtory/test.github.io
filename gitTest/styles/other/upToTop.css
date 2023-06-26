@@ -1,0 +1,20 @@
+.upToTop {
+    background-color: aquamarine;
+    color: #FCFCFC;
+    font-size: 40px;
+    border-radius: 20%;
+    border: none;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    opacity: 0.8;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    border: 2px #9D9D9D solid;
+
+}
+
+.upToTop:hover {
+    background-color: #02DF82;
+    cursor: pointer;
+}

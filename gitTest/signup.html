@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <!--reset-->
+    <link rel="stylesheet" href="styles/layout/reset.css">
+    <!--font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--signupCSS-->
+    <link rel="stylesheet" href="styles/layout/globalStyle.css">
+    <link rel="stylesheet" href="styles/layout/headerStyle.css">
+    <link rel="stylesheet" href="styles/singup/mainStyle.css"> 
+    <link rel="stylesheet" href="styles/layout/footerStyle.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <a href="#">
+                <img class="imgLogo" src="./images/Logo.jpg" alt="無法顯示圖片">
+            </a>
+            <div class="searchBar">
+                <div class="searchInputBack">
+                    <input type="text" class="searchInput">
+                </div>
+                <button class="searchBarIcon"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <ul class="topNav" id="topNav">
+                <li><a href="#">關於我們</a></li>|
+                <li><a href="#">設定</a></li>|
+                <li><a href="#"><i class="fa-solid fa-user-large"></i></a></li>
+            </ul>
+            <div class="memberContainer" id="memberContainer">
+                <ul class="memberNav">
+                    <a href="#">
+                        <li>註冊</li>
+                    </a>
+                    <a href="#">
+                        <li>登入</li>
+                    </a>
+                </ul>
+            </div>
+        </header>
+      
+        <div class="main">
+            <div class="signupContainer">
+                <div class="signupTitle">
+                    <p>註冊</p>
+                </div>
+                <div class="signupInfoContainer">
+                    <form>
+                        <div class="signupInfoItem">
+                            <label for="userName">名稱</label>
+                            <div class="signupInfoInput">
+                                <div class="InputDiv">
+                                    <input id="userName" type="text" placeholder="請輸入名稱">
+                                </div>
+                                <div class="correctDiv">
+                                    <i class="fa-regular fa-circle-check" style="color: #86e17a;"></i>
+                                </div>
+                            </div>
+                            <div class="errorText"><small>名稱錯誤</small></div>
+                        </div>
+
+                        <div class="signupInfoItem">
+                            <label for="userPassword">密碼</label>
+                            <div class="signupInfoInput">
+                                <div class="InputDiv">
+                                    <input id="userPassword" type="Password" placeholder="請輸入密碼">
+                                </div>
+                                <div class="correctDiv">
+                                    <i class="fa-regular fa-circle-check" style="color: #86e17a;"></i>
+                                </div>
+                            </div>
+                            <div class="errorText"><small>密碼錯誤</small></div>
+                        </div>
+                        <div class="signupInfoItem">
+                            <label for="userPasswordAgain">密碼確認</label>
+                            <div class="signupInfoInput">
+                                <div class="InputDiv">
+                                    <input id="userPasswordAgain" type="Password" placeholder="再次確認密碼">
+                                </div>
+                                <div class="correctDiv">
+                                    <i class="fa-regular fa-circle-check" style="color: #86e17a;"></i>
+                                </div>
+                            </div>
+                            <div class="errorText"><small>密碼確認錯誤</small></div>
+                        </div>
+                        <div class="signupInfoItem">
+                            <label for="userPhone">電話號碼</label>
+                            <div class="signupInfoInput">
+                                <div class="InputDiv">
+                                    <input id="userPhone" type="text" placeholder="請輸入連絡電話">
+                                </div>
+                                <div class="correctDiv">
+                                    <i class="fa-regular fa-circle-check" style="color: #86e17a;"></i>
+                                </div>
+                            </div>
+                            <div class="errorText"><small>電話號碼輸入錯誤</small></div>
+                        </div>
+                        <div class="signupInfoItem">
+                            <label for="userEmail">電子郵件</label>
+                            <div class="signupInfoInput">
+                                <div class="InputDiv">
+                                    <input id="userEmail" type="Email" placeholder="請輸入電子郵件">
+                                </div>
+                                <div class="correctDiv">
+                                    <i class="fa-regular fa-circle-check" style="color: #86e17a;"></i>
+                                </div>
+                            </div>
+                            <div class="errorText"><small>電子郵件輸入錯誤</small></div>
+                        </div>
+
+                        <div id="agreePolicyCotainer" class="signupInfoItem">
+                            <input id="agreePolicy" type="checkbox" >
+                            <p style="display: inline;">我已詳細閱讀並同意相關規定</p>
+                            <!-- <small class="errorText">請勾選此選項</small> -->
+                        </div>
+
+                        <div class="signupFooter">
+                            
+                            <button id="btnSignup" type="submit" disabled><p>送出</p></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="footerContainer">
+            <div class="companyInfo">
+                <p>網站購物有限公司台灣分公司</p>
+                <p>地點：Taipei</p>
+                <p>統一編號: 00000000</p>
+                <p>© 2023 WebShop. 版權所有。</p>
+            </div>
+        </footer>
+    </div>
+
+    
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="scripts/signup/signup.js"></script>
+    <script>
+        /*
+            1.前端驗證
+            2.檢視密碼
+            3.先打好密碼 ->輸入相印的確認密碼 -> 回去修改上面密碼: 確認密碼與密碼不相符，還是通過。
+        */
+    </script>
+
+</body>
+
+</html>

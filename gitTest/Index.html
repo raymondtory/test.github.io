@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <!--reset-->
+    <link rel="stylesheet" href="styles/layout/reset.css">
+    <!--font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--indexCSS-->
+    <link rel="stylesheet" href="styles/layout/globalStyle.css">
+    <link rel="stylesheet" href="styles/layout/headerStyle.css">
+    <link rel="stylesheet" href="styles/index/sliderStyle.css">
+    <link rel="stylesheet" href="styles/index/mainStyle.css">
+    <link rel="stylesheet" href="styles/layout/footerStyle.css">
+    <link rel="stylesheet" href="styles/layout/login.css">
+    
+<style>
+
+</style>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header>
+            <a href="#">
+                <img class="imgLogo" src="./images/Logo.jpg" alt="無法顯示圖片">
+            </a>
+            <div class="searchBar">
+                <div class="searchInputBack">
+                    <input type="text" class="searchInput">
+                </div>
+                <button class="searchBarIcon"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <ul class="topNav" id="topNav">
+                <li><a href="#">關於我們</a></li>|
+                <li><a href="#">設定</a></li>|
+                <li><a href="#"><i class="fa-solid fa-user-large"></i></a></li>
+                <!-- <li><a href="#"><i class="loginedUser">123</i></a></li> -->
+
+            </ul>
+            <div class="memberContainer" id="memberContainer">
+                <ul class="memberNav">
+                    <!-- <a href="#">
+                        <li>註冊</li>
+                    </a>
+                    <a href="#">
+                        <li>登入</li>
+                    </a> -->
+                    <a href="#">
+                        <li>修改個人資料</li>
+                    </a>
+                    <a href="#">
+                        <li>購物車</li>
+                    </a>
+
+                </ul>
+            </div>
+        </header>
+
+        <div class="main">
+            <div class="sliderwraper">
+                <div class="sliderContainer">
+                    <button id="sliderLeft" class="sliderLeft"><i class="fa-solid fa-caret-left"></i></button>
+                    <div class="slider">
+                        <ul id="sliderImg" class="sliderImg">
+                            <li>
+                                <img src="images/slider/slider1.png" alt="圖 1 無法顯示">
+                            </li>
+                            <li>
+                                <img src="images/slider/slider2.png" alt="圖 2 無法顯示">
+                            </li>
+                            <li>
+                                <img src="images/slider/slider3.png" alt="圖 3 無法顯示">
+                            </li>
+                            <li>
+                                <img src="images/slider/slider4.jpg" alt="圖 4 無法顯示">
+                            </li>
+                            <li>
+                                <img src="images/slider/slider5.jpeg" alt="圖 5 無法顯示">
+                            </li>
+                            <li>
+                                <img src="images/slider/slider6.jpg" alt="圖 6 無法顯示">
+                            </li>
+                        </ul>
+                        <ul id="sliderDots" class="sliderDots">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <button id="sliderRight" class="sliderRight"><i class="fa-solid fa-caret-right"></i></button>
+                </div>
+            </div>
+
+            <div class="productContainer">
+                <div class="product">
+                    <a href="#">
+                        <figure>
+                            <img src="images/product.jpg" alt="">
+                        </figure>
+                        <div class="productName">
+                            <p>主打商品1</p>
+                        </div>
+                        <div class="productPrice">
+                            <p>NT$69</p>
+                        </div>
+
+                    </a>
+                </div>
+
+                <div class="product">
+                    <a href="#">
+                        <figure>
+                            <img src="images/product.jpg" alt="">
+                        </figure>
+                        <div class="productName">
+                            <p>主打商品2</p>
+                        </div>
+                        <div class="productPrice">
+                            <p>NT$69</p>
+                        </div>
+
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <figure>
+                            <img src="images/product.jpg" alt="">
+                        </figure>
+                        <div class="productName">
+                            <p>主打商品3</p>
+                        </div>
+                        <div class="productPrice">
+                            <p>NT$69</p>
+                        </div>
+
+                    </a>
+                </div>
+                <div class="product">
+                    <a href="#">
+                        <figure>
+                            <img src="images/product.jpg" alt="">
+                        </figure>
+                        <div class="productName">
+                            <p>主打商品4</p>
+                        </div>
+                        <div class="productPrice">
+                            <p>NT$69</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <footer>
+            <div class="companyInfo">
+                <p>網站購物有限公司台灣分公司</p>
+                <p>地點：Taipei</p>
+                <p>統一編號: 00000000</p>
+                <p>© 2023 WebShop. 版權所有。</p>
+            </div>
+        </footer>
+    </div>
+    
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <!--indexJS-->
+    <script src="scripts/layout/showMemberContainer.js"></script> 
+    <script src="scripts/index/slider.js"></script>
+    <script src="scripts/layout/login.js"></script>
+
+    <!-- <script>
+        
+        let userfield = $("#topNav li").last();
+        userfield.find("a").empty();
+        var txt="<p>Text.</p>";
+        userfield.find("a").append(txt)
+    </script> -->
+
+    <script>
+        setInterval(()=>{
+            
+        })
+    </script>
+</body>
+
+</html>
